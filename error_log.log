@@ -1,0 +1,19 @@
+[20-May-2024 11:52:00 Europe/Berlin] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\диплом2\event_details.php on line 29
+[20-May-2024 11:52:05 Europe/Berlin] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\диплом2\event_details.php on line 29
+[20-May-2024 11:53:03 Europe/Berlin] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\диплом2\event_details.php on line 29
+[20-May-2024 11:56:24 Europe/Berlin] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\диплом2\event_details.php on line 27
+[20-May-2024 11:57:49 Europe/Berlin] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\диплом2\event_details.php on line 27
+[20-May-2024 11:57:52 Europe/Berlin] PHP Warning:  Undefined array key "id" in C:\xampp\htdocs\диплом2\event_details.php on line 27
+[20-May-2024 12:04:50 Europe/Berlin] PHP Warning:  Undefined variable $presence_checked in C:\xampp\htdocs\диплом2\event_details.php on line 210
+[20-May-2024 12:13:24 Europe/Berlin] User ID: 6
+[20-May-2024 12:13:24 Europe/Berlin] Event ID: 4
+[20-May-2024 12:13:24 Europe/Berlin] Presence: 0
+[20-May-2024 12:13:27 Europe/Berlin] User ID: 6
+[20-May-2024 12:13:27 Europe/Berlin] Event ID: 4
+[20-May-2024 12:13:27 Europe/Berlin] Presence: 1
+[20-May-2024 12:27:49 Europe/Berlin] User ID: 6
+[20-May-2024 12:27:49 Europe/Berlin] Event ID: 4
+[20-May-2024 12:27:49 Europe/Berlin] Presence: 0
+[20-May-2024 12:35:24 Europe/Berlin] User ID: 6
+[20-May-2024 12:35:24 Europe/Berlin] Event ID: 4
+[20-May-2024 12:35:24 Europe/Berlin] Presence: 1

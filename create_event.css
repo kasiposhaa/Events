@@ -1,0 +1,164 @@
+/* Общий стиль страницы */
+body {
+    font-family: Roboto;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2em;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch; /* Элементы растягиваются по высоте контейнера */
+  padding: 3%;
+}
+
+.right-panel {
+  margin-left: 30px;
+    width: 70%;
+    padding: 20px;
+    top: 10%;
+    left: 10%;
+    border-radius: 10px;
+    border: 5px solid;
+  border-radius: 3%;
+  border-color: rgb(31, 45, 76);
+}
+
+.left-panel {
+    width: 30%;
+    padding: 20px;
+    /* Фон с гифкой кота */
+    background-image: url('icons/cat.gif'); 
+    background-size: contain;
+    background-position: center; /* Центрируем изображение */
+    background-repeat: no-repeat;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Сокращаем расстояние между элементами формы */
+    overflow-x: hidden; /* Предотвращаем горизонтальный выход */
+}
+
+input, select, textarea {
+    padding: 10px;
+    border: 1px solid rgb(31, 45, 76);
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    size: auto;
+}
+
+/* Кнопка "Назад" */
+#goBackButton {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgb(31, 45, 76);
+  color: rgb(181, 181, 181);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#goBackButton:hover {
+  background-color: rgb(102, 121, 160);
+  color: rgb(0, 0, 0);
+}
+
+
+.editable {
+    border: 1px solid rgb(31, 45, 76);
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+a,button {
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    cursor: pointer; /* Изменяем курсор при наведении на ссылки и кнопки */
+    border-radius: 25px; /* Закругляем углы у кнопок */
+    border: 1px solid;
+    transition: background-color 0.3s ease; /* Плавное изменение цвета фона при наведении */
+    margin: 0.5%;
+    display: inline-block; /* Ссылки теперь блочные элементы */
+    color: rgb(0, 0, 0); 
+    padding: 10px 20px; /* Задаем отступы вокруг текста */
+    background-color: buttonface;
+  }
+  /* Стили для наведения на ссылки и кнопки */
+  a:hover,button:hover {
+    background-color: rgb(31, 45, 76);
+    color: #e9f4fb;
+  }
+  
+  /* Стили для блока с тегами */
+  .list {
+    max-height: 100px; /* Максимальная высота блока */
+    overflow-y: auto; /* Включаем вертикальную прокрутку при необходимости */
+    padding: 10px; /* Добавляем внутренний отступ для контента */
+  }
+  
+  /* Убираем маркеры у списка тегов */
+  .list ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  /* Стили для отдельного тега */
+  .list li {
+    position: relative;
+    padding-left: 20px; /* Добавляем отступ слева для маркера */
+    margin-bottom: 10px; /* Отступ между элементами списка */
+  }
+  
+  .list li::before {
+    content: "\2022"; /* Задаем маркер в виде круга */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgb(31, 45, 76);
+    font-size: 1.2em; /* Размер маркера */
+  }
+  
+  /* Стили для контейнера колонок */
+  .column-container {
+    display: flex;
+    gap: 20px; /* Расстояние между элементами */
+}
+  
+  /* Стили для отдельной колонки */
+  .column {
+    flex: 1; /* Распределение пространства между колонками */
+    margin-right: 0,5%; /* Отступ между колонками */
+  }
+  
+  div {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Это поможет учесть padding и border при расчете размеров элемента */
+  }
+
+  @media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* В режиме мобильного устройства панели выстраиваются вертикально */
+    }
+
+    .right-panel {
+        width: 100%; /* Панель занимает всю ширину */
+    }
+
+    .left-panel {
+        width: 100%; /* Панель занимает всю ширину */
+    }
+}

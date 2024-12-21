@@ -1,0 +1,255 @@
+body {
+  font-family: Roboto;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.center {
+  margin: 20px auto;
+  width: 30%;
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 5px solid;
+  border-radius: 3%;
+  border-color: rgb(31, 45, 76);
+}
+
+.center h1 {
+  text-align: center;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid silver;
+}
+
+.center form {
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.center form a {
+  display: block;
+  margin: auto;
+  text-align: center;
+  width: calc(100% - 2 * 40px);
+  padding: 10px 20px;
+}
+
+form .txt_field {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+
+.txt_field input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.txt_field label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.txt_field span::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0px;
+  height: 2px;
+  background: rgb(31, 45, 76);
+  transition: .5s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+  top: -5px;
+  color: rgb(31, 45, 76);
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before {
+  width: 100%;
+}
+
+input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  color: black;
+}
+
+input[type="submit"]:hover {
+  background: rgb(31, 45, 76);
+  color: #e9f4fb;
+  transition: .5s;
+}
+
+.select_field {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+
+.select_field select {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  appearance: none;
+  outline: none;
+}
+
+.select_field::after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.select_field label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.select_field select:focus ~ label,
+.select_field select:valid ~ label {
+  top: -5px;
+  color: rgb(31, 45, 76);
+}
+
+@media screen and (max-width: 800px) {
+  .center {
+      width: 80%;
+  }
+  
+  .center form {
+      padding: 0 20%;
+  }
+  
+  input[type="submit"] {
+      height: 40px;
+      font-size: 16px;
+  }
+  .select_field select {
+      height: 30px;
+  }
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 25px;
+  border: 1px solid;
+  transition: background-color 0.3s ease;
+  margin: 0.5%;
+  display: inline-block;
+  color: rgb(0, 0, 0); 
+  padding: 10px 20px;
+  background-color: buttonface;
+}
+
+a:hover {
+  background-color: rgb(31, 45, 76);
+  color: #e9f4fb;
+}
+
+.list {
+  max-height: 100px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.list ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.list li::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(31, 45, 76);
+  font-size: 1.2em;
+}
+
+.column-container {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.column:last-child {
+  margin-right: 0;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.notification {
+  padding: 10px 20px;
+  margin: 10px auto;
+  border-radius: 4px;
+  width: fit-content;
+  max-width: 300px;
+  text-align: center;
+}
+
+.notification.success {
+  background-color: rgb(31, 45, 76);
+  color: white;
+}
+
+.notification.error {
+  background-color: #3f0400;
+  color: white;
+}

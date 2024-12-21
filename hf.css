@@ -1,0 +1,74 @@
+/* Общие стили для хедера и футера */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  background-color: rgb(31, 45, 76);
+  color: rgb(255, 255, 255);
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap; /* Предотвращает перенос строк */
+  flex-grow: 0; /* Предотвращает растягивание элементов на всю доступную ширину */
+}
+
+.logo {
+  display: inline-flex; /* Замена display: flex; */
+  flex-shrink: 0;
+  white-space: nowrap;
+  align-items: center;
+  max-width: 100%;
+  height: auto;
+  margin-right: 20px;
+}
+
+.footer {
+  margin-top: auto;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 40px 0;
+  background-color: rgb(31, 45, 76);
+  color: #fff;
+}
+
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+  justify-items: start; /* Выравнивание содержимого по левому краю */
+  justify-content: center; /* Выравнивание колонок по центру горизонтально */
+}
+
+.footer-column {
+  margin-right: 20px;
+}
+
+.icon {
+  display: inline-flex; /* Замена display: flex; */
+  align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.icon img, .ficon img {
+  max-width: 20px; 
+  height: auto; 
+  margin-right: 5px; 
+  margin-left: 5px; 
+}
+
+.ficon {
+  align-items: center;
+  flex-shrink: 0;
+}

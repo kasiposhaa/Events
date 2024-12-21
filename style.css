@@ -1,0 +1,260 @@
+/* Общие стили */
+body {
+    font-family: Roboto;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Кнопка "Наверх" */
+#scrollBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: rgb(154, 154, 154);
+    color: rgb(0, 9, 38);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5%; /* Круглая форма кнопки */
+}
+
+#scrollBtn:hover {
+    background-color: rgb(102, 121, 160);
+    color: rgb(0, 0, 0);
+}
+
+/* Кнопка "Назад" */
+#goBackButton {
+    position: fixed;
+    text-decoration: none;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgb(154, 154, 154);
+    color: rgb(0, 9, 38);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#goBackButton:hover {
+    background-color: rgb(102, 121, 160);
+    color: rgb(0, 0, 0);
+}
+
+/* Основные контейнеры */
+.event-container {
+    width: 90%; /* Ширина контейнера */
+    max-width: 1200px; /* Максимальная ширина */
+    margin: 0 auto; /* Центрирование контейнера по горизонтали */
+}
+
+h1 {
+    text-align: center;
+}  
+
+/* Общие стили для ссылок и кнопок */
+a, button {
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    cursor: pointer; /* Изменяем курсор при наведении на ссылки и кнопки */
+    padding: 10px 20px; /* Задаем отступы вокруг текста в ссылках и кнопках */
+    border: none; /* Убираем границу у кнопок */
+    border-radius: 5px; /* Закругляем углы у кнопок */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета фона при наведении */
+    margin: 0.5%;
+}
+
+/* Стили для ссылок */
+a {
+    display: inline-block; /* Ссылки теперь блочные элементы */
+    color: rgb(255, 255, 255); 
+    padding: 10px 20px; /* Задаем отступы вокруг текста */
+    border-radius: 5px; /* Закругляем углы */
+    background-color:  rgb(44, 64, 108); /* Цвет фона */
+    text-decoration: none; /* Убираем подчеркивание */}
+
+/* Стили для кнопок */
+button {
+    background-color: rgb(44, 64, 108);
+    color: rgb(255, 255, 255);
+}
+
+/* Стили для наведения на ссылки и кнопки */
+a:hover, button:hover {
+    background-color: rgb(93, 113, 155); /* Изменяем цвет фона при наведении */
+    color: rgb(0, 0, 0);
+}
+
+/* Стили для изображений */
+img {
+    max-width: 100%; /* Устанавливаем максимальную ширину картинки по размеру контейнера */
+    max-height: 400px; /* Максимальная высота картинки */
+    height: auto; /* Позволяет изображению сохранять пропорции при изменении размеров */
+    width: auto; /* Позволяет изображению сохранять пропорции при изменении размеров */
+    display: block; /* Убираем возможные пробелы снизу изображения */
+    object-fit: contain; /* Сохраняем пропорции и полностью вписываем изображение в контейнер */
+    float: left; /* Выравниваем изображение слева */
+    margin-right: 10px; /* Добавляем отступ справа */
+}
+
+/* Стили для видео */
+video {
+    max-width: 100%; /* Устанавливаем максимальную ширину видео по размеру контейнера */
+    max-height: 400px; /* Максимальная высота видео */
+    height: auto; /* Позволяет видео сохранять пропорции при изменении размеров */
+    width: auto; /* Позволяет видео сохранять пропорции при изменении размеров */
+    display: block; /* Убираем возможные пробелы снизу видео */
+    object-fit: contain; /* Сохраняем пропорции и полностью вписываем видео в контейнер */
+    float: left; /* Выравниваем видео слева */
+    margin-right: 10px; /* Добавляем отступ справа */
+}
+
+/* Основной контейнер аудиоплеера */
+audio {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Кнопки воспроизведения и паузы */
+  audio::-webkit-media-controls-play-button,
+  audio::-webkit-media-controls-pause-button {
+    background-color: rgb(69, 103, 131);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  audio::-webkit-media-controls-play-button:hover,
+  audio::-webkit-media-controls-pause-button:hover {
+    background-color: rgb(44, 64, 108);
+  }
+  
+  table{
+    margin: 0 auto; /* Автоматически выравниваем контейнер по горизонтали */
+  }
+  .table_col {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 18px;
+    width: 80%;
+    background: rgba(130, 143, 192, 0.614);
+    text-align: left;
+    border-collapse: collapse;
+    color: #1e1f21;
+  }
+  .table_col th:first-child, .table_col td:first-child {
+  color: #1e1f21;
+  border-left: none;
+  }
+  .table_col th {
+  font-weight: normal;
+  border-bottom: 2px solid #001c57;
+  padding: 8px 10px;
+  }
+  .table_col td {
+  padding: 12px 10px;
+  color: #1e1f21;
+  }
+
+.slider {
+    max-width: 100%; /* Устанавливаем максимальную ширину видео по размеру контейнера */
+    max-height: 400px; /* Максимальная высота видео */
+    height: auto; /* Позволяет видео сохранять пропорции при изменении размеров */
+    width: auto; /* Позволяет видео сохранять пропорции при изменении размеров */
+    margin: auto;
+    overflow: hidden; /* Добавлено, чтобы избежать переполнения */
+}
+
+.slider img, .slider video {
+    max-width: 100%; /* Устанавливаем максимальную ширину видео по размеру контейнера */
+    max-height: 400px; /* Максимальная высота видео */
+    height: auto; /* Позволяет видео сохранять пропорции при изменении размеров */
+    width: auto; /* Позволяет видео сохранять пропорции при изменении размеров */
+    display: block; /* Убираем возможные пробелы снизу видео */
+    object-fit: contain; /* Сохраняем пропорции и полностью вписываем видео в контейнер */
+    float: left; /* Выравниваем видео слева */
+    margin-right: 10px; /* Добавляем отступ справа */
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search input[type="text"] {
+    flex: 1; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.search input[type="date"],
+.search select {
+    flex: 0 0 auto; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.search select {
+    padding: 10px;
+}
+
+.search button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(31, 45, 76);
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+    background-color: rgb(61, 85, 116);
+}
+
+.search select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.search input[type="text"]::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.search input[type="text"]:focus::placeholder {
+    color: transparent;
+}
+
+.search form:last-child {
+    margin-right: 10px;
+}

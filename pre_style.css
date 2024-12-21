@@ -1,0 +1,207 @@
+button{
+    text-decoration: none;
+    background-color: rgb(31, 45, 76);
+    color: rgb(227, 227, 227);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+button:hover{
+    background-color: rgb(102, 121, 160);
+    color: rgb(0, 0, 0);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search input[type="text"] {
+    flex: 1; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.search input[type="date"],
+.search select {
+    flex: 0 0 auto; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.search select {
+    padding: 10px;
+}
+
+.search button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(31, 45, 76);
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+    background-color: rgb(61, 85, 116);
+}
+
+.search select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.search input[type="text"]::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.search input[type="text"]:focus::placeholder {
+    color: transparent;
+}
+
+.search form:last-child {
+    margin-right: 10px;
+}
+
+.event-info {
+    overflow: hidden; /
+}
+
+.event-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.event-item img {
+    float: left; 
+    margin-right: 10px; 
+    width: 100px; 
+    height: 100px; 
+    border-radius: 5px; 
+}
+
+.event-item {
+    display: block; 
+    margin-top: 3%;
+    margin-left: 9%;
+    text-decoration: none; 
+    color: #000000;
+}
+
+.event-item:hover h2{
+    color: rgb(23, 35, 100);
+    text-shadow: 2px 2px 5px rgb(138, 179, 255); 
+}
+
+body {
+    font-family: Roboto;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Кнопка "Наверх" */
+#scrollBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: rgb(154, 154, 154);
+    color: rgb(0, 9, 38);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5%; /* Круглая форма кнопки */
+}
+
+#scrollBtn:hover {
+    background-color: rgb(102, 121, 160);
+    color: rgb(0, 0, 0);
+}
+
+/* Кнопка "Назад" */
+#goBackButton {
+    position: fixed;
+    text-decoration: none;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgb(154, 154, 154);
+    color: rgb(0, 9, 38);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#goBackButton:hover {
+    background-color: rgb(102, 121, 160);
+    color: rgb(0, 0, 0);
+}
+
+.link {
+    display: inline-block;
+    font-size: 22px;
+    color: #000000;
+    text-decoration: none;
+    margin-right: 20px;
+    position: relative;
+}
+
+.link::after {
+    content: '';
+    display: none;
+    width: 100%;
+    height: 4px;
+    background: rgb(31, 45, 76);
+    position: absolute;
+    left: 0;
+    bottom: -1;
+}
+
+.link.active::after {
+    display: block;
+}
+
+.link:hover {
+    color: rgb(31, 45, 76);
+}
+
+.line {
+    position: absolute;
+    top: 39%;
+    left: 9%;
+    width: 80%;
+    height: 2px;
+    background-color: #ddd; /* Цвет полоски */
+}
